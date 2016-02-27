@@ -1,0 +1,82 @@
+\documentclass[]{article}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+
+%opening
+\title{Minecraft Mod\\
+	Working Title: Sky Shards}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+\section{Shards-Mechanic}
+\begin{itemize}
+	\item Ley-Lines fließen durch Welt, Energieströme
+	\item Schnittpunkte von Ley-Lines besonders
+	\item Jeder Shard braucht Graviton
+	\item Graviton braucht Energie, um Blocks zu halten
+	\begin{itemize}
+		\item Je mehr Energie, desto größerer Radius
+		\item Sicherer Radius und halbstabiler Radius
+		\item $\frac{r_{halb}}{r_{sicher}} < 0,9$ wird größer mit mehr Energie
+		\item Danach nur Maxradius-Steigerung, jedoch wesentlich mehr Energie dafür
+		\item Gravitons ziehen Energie aus Ley-Lines, verbessert durch Upgrades
+		\item ziehen immer maximal Energie, man kann jedoch Energie abzapfen
+	\end{itemize}
+	\item Konstrukt zum Spawnen neuer Gravitons
+	\begin{itemize}
+		\item Param: generelle Richtung, genutzte Resourcen, Tier der Gravitons \\(nicht fest)
+		\item entstehen an Schnittpunkten von Ley-Lines
+	\end{itemize}
+	\item verschiedene Graviton-Typen
+	\item verschiedene Biome, je nach Graviton-Typ
+	\item je nach Biome/Graviton-Typ neue Resourcen
+	\item beeinflussbar durch Konstrukte:
+	\begin{itemize}
+		\item Shard-Shape (Brücken, etc.)
+		\item Biome
+	\end{itemize}
+	\item Shards können zufällig spawnen
+	\begin{itemize}
+		\item halten länger als künstlich erzeugte
+		\item höhere Chance auf seltene Gravitons/Shards
+	\end{itemize}
+\end{itemize}
+
+\section{Resourcen und Abbau}
+\begin{itemize}
+	\item Resourcen Shard-abhängig
+	\item Resourcen haben geringere Quantität als in Vanilla, langsamerer Abbau (Splitter?) $\longrightarrow$ mehr pro Block
+	\item Konstrukte zum Abbau von Resourcen
+	\begin{itemize}
+		\item Nicht vollautomatisiert(!), nur halb-automatisiert (Interaktion alle viertel(?) Stunde)
+	\end{itemize}
+\end{itemize}
+
+\section{Tools}
+\begin{itemize}
+	\item Neue Durability-Balance (alte Tools entfernen oder anpassen)
+	\item Grappling Hook
+	\begin{itemize}
+		\item Kann Brücken spannen, begrenzte Länge
+		\item lange Brücken durch kleine Shards verbunden durch kleine Brücken
+	\end{itemize}
+	\item Hedron-Battery
+	\begin{itemize}
+		\item speichern Energie, aufladbar
+		\item verschiedene Tiers
+	\end{itemize}
+\end{itemize}
+
+\section{Random Ideas}
+\begin{itemize}
+	\item Gravitons haben Pre-/Suffix, craftbar
+	\item neue (fliegende) Monster
+\end{itemize}
+\end{document}
