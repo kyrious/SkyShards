@@ -12,17 +12,28 @@ public class Hedron extends Block {
 
 	public Hedron() {
 		super(Material.rock, MapColor.blackColor);
-        this.setCreativeTab(CreativeTabs.tabMisc);
+		this.setCreativeTab(CreativeTabs.tabMisc);
 	}
 
 	@SideOnly(Side.CLIENT)
+	@Override
 	public EnumWorldBlockLayer getBlockLayer() {
-		return EnumWorldBlockLayer.CUTOUT;
+		return EnumWorldBlockLayer.CUTOUT_MIPPED;
 	}
 
+	@Override
 	public String getUnlocalizedName() {
 		return "Hedron";
 	}
 
-	
+	@Override
+	public boolean isFullCube() {
+		return false;
+	}
+
+	@Override
+	public boolean isOpaqueCube() {
+		return false;
+	}
+
 }

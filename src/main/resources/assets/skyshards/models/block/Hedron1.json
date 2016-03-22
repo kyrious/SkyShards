@@ -1,7 +1,8 @@
 {
     "__comment": "Model generated using MrCrayfish's Model Creator (http://mrcrayfish.com/modelcreator/)",
     "textures": {
-        "0": "blocks/hedron"
+        "0": "skyshards:blocks/hedron1",
+        "1": "blocks/hedron"
     },
     "elements": [
         {
@@ -55,6 +56,34 @@
                 "north": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
                 "east": { "texture": "#-1", "uv": [ 0.0, 0.0, 0.0, 16.0 ] },
                 "south": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+                "west": { "texture": "#-1", "uv": [ 0.0, 0.0, 0.0, 16.0 ] },
+                "up": { "texture": "#-1", "uv": [ 0.0, 0.0, 16.0, 0.0 ] },
+                "down": { "texture": "#-1", "uv": [ 0.0, 0.0, 16.0, 0.0 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 0.0, 15.0, 2.0 ], 
+            "to": [ 16.0, 31.0, 2.0 ], 
+            "rotation": { "origin": [ 8.0, 15.0, 2.0 ], "axis": "x", "angle": 22.5 },
+            "faces": {
+                "north": { "texture": "#1", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+                "east": { "texture": "#-1", "uv": [ 0.0, 0.0, 0.0, 16.0 ] },
+                "south": { "texture": "#1", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+                "west": { "texture": "#-1", "uv": [ 0.0, 0.0, 0.0, 16.0 ] },
+                "up": { "texture": "#-1", "uv": [ 0.0, 0.0, 16.0, 0.0 ] },
+                "down": { "texture": "#-1", "uv": [ 0.0, 0.0, 16.0, 0.0 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 0.0, 15.0, 14.0 ], 
+            "to": [ 16.0, 31.0, 14.0 ], 
+            "rotation": { "origin": [ 8.0, 15.0, 14.0 ], "axis": "x", "angle": -22.5 },
+            "faces": {
+                "north": { "texture": "#1", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+                "east": { "texture": "#-1", "uv": [ 0.0, 0.0, 0.0, 16.0 ] },
+                "south": { "texture": "#1", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
                 "west": { "texture": "#-1", "uv": [ 0.0, 0.0, 0.0, 16.0 ] },
                 "up": { "texture": "#-1", "uv": [ 0.0, 0.0, 16.0, 0.0 ] },
                 "down": { "texture": "#-1", "uv": [ 0.0, 0.0, 16.0, 0.0 ] }

@@ -8,25 +8,35 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class BlockRegistry {
 
-	public static Block HEDRON_BLOCK;
+	private static BlockRegistry instance;
+	
+	public static BlockRegistry getInstance(){
+		if(instance == null)
+			instance = new BlockRegistry();
+		return instance;
+	}
+	
+	public final Block HEDRON_BLOCK;
 
-	public void init() {
+	private BlockRegistry() {
 		HEDRON_BLOCK = new Hedron();
-		register();
-		registerRenders();
 	}
 
-	public void register() {
-		GameRegistry.registerBlock(HEDRON_BLOCK, HEDRON_BLOCK.getUnlocalizedName());
+	public void registerBlocks() {
+		registerBlock(HEDRON_BLOCK);
+	}
+	
+	private void registerBlock(Block b){
+		GameRegistry.registerBlock(b, b.getUnlocalizedName());
 	}
 
 	public void registerRenders() {
 		registerRenderForBlock(HEDRON_BLOCK);
 	}
 
-	public void registerRenderForBlock(Block b) {
-		Item i = Item.getItemFromBlock(b);
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(i, 0,
+	private void registerRenderForBlock(Block b) {
+		Item item = Item.getItemFromBlock(b);
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0,
 				new ModelResourceLocation(b.getUnlocalizedName()));
 	}
 }

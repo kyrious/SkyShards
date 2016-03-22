@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "normal": { "model": "SkyShards:Hedron" },
+        "inventory": { "model": "SkyShards:Hedron" }
+    }
+}
