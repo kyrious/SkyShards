@@ -1,5 +1,6 @@
 package de.skyshards.core;
 
+import de.skyshards.gui.core.SkyShardsGuiHandler;
 import de.skyshards.proxy.ProxyReg;
 import de.skyshards.shardgen.EmptyWorldType;
 import net.minecraft.world.WorldType;
@@ -20,6 +21,8 @@ public class SkyShardsMod {
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		ProxyReg.getCommonProxy().init(event);
-		WorldType.worldTypes[0] = new EmptyWorldType();
-	}
+		WorldType.worldTypes[4] = new EmptyWorldType();
+		SkyShardsGuiHandler.init();
+	}	
+	
 }
