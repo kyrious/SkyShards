@@ -2,8 +2,10 @@ package de.skyshards.blocks;
 
 import java.util.LinkedList;
 
+import de.skyshards.blocks.chippedmining.ChippedIronOreBlock;
 import de.skyshards.blocks.hedron.Hedron;
 import de.skyshards.blocks.inventorytest.InventoryTileEntityTestBlock;
+import de.skyshards.core.SkyShardsMod;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
@@ -24,7 +26,8 @@ public class BlockRegistry {
 
 	private BlockRegistry() {
 		registeredBlocks.add(new Hedron());
-		registeredBlocks.add(new InventoryTileEntityTestBlock());
+//		registeredBlocks.add(new InventoryTileEntityTestBlock());
+		registeredBlocks.add(new ChippedIronOreBlock());
 	}
 
 	public void registerBlocks() {
@@ -43,7 +46,13 @@ public class BlockRegistry {
 
 	private void registerRenderForBlock(Block b) {
 		Item item = Item.getItemFromBlock(b);
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0,
-				new ModelResourceLocation(b.getUnlocalizedName()));
+		ModelResourceLocation resourceLocation;
+		if (b instanceof IModelResourceLocationProvider) {
+			resourceLocation = ((IModelResourceLocationProvider) b).getModelResourceLocation();
+		} else {
+			resourceLocation = new ModelResourceLocation(SkyShardsMod.MODID+":"+b.getUnlocalizedName(), "inventory");
+		}
+		System.err.println("registerRenderForBlock b.class: "+b.getClass()+ " resourceLocation="+resourceLocation);
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, resourceLocation);
 	}
 }
