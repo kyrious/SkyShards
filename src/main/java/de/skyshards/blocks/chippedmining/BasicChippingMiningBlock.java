@@ -13,10 +13,14 @@ public class BasicChippingMiningBlock extends BlockContainer {
 	private ItemStack mineableItemStack;
 	private int amountMineableItemStacks;
 
-	public BasicChippingMiningBlock(ItemStack mineableItemStack, int amountMineableItemStacks) {
-		super(Material.rock);
+	public BasicChippingMiningBlock(Material material, ItemStack mineableItemStack, int amountMineableItemStacks) {
+		super(material);
 		this.mineableItemStack = mineableItemStack;
 		this.amountMineableItemStacks = amountMineableItemStacks;
+	}
+	
+	public BasicChippingMiningBlock(ItemStack mineableItemStack, int amountMineableItemStacks) {
+		this(Material.rock, mineableItemStack, amountMineableItemStacks);
 	}
 
 	@Override

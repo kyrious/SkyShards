@@ -1,7 +1,7 @@
 package de.skyshards.gui;
 
-import de.skyshards.core.AbstractInventoryTileEntity;
 import de.skyshards.gui.containers.BasicInventoryContainer;
+import de.skyshards.gui.core.AbstractInventoryTileEntity;
 import de.skyshards.gui.core.IGuiElementProvider;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.EntityPlayer;
